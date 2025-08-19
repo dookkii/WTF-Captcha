@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html data-theme="dark">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Tra cứu phạt nguội" property="og:title">
+    <meta content="Cổng tra cứu phạt nguội tự động" property="og:description">
+    <meta content="https://phatnguoi.tunaa.io.vn/" property="og:url">
+    <meta content="https://i.namu.wiki/i/4CrxZLtJKTSjx-RRkEG0KsBQhNtYrFyWCBcyx1A3WoMLNzcZVJ90L0x9vp0SGSCQaN0QGxNikg0sbLWkdrNsaQ.webp" property="og:image">
+    <meta content="summary_large_image" name="twitter:card">
+    <meta content="#4258ff" data-react-helmet="true" name="theme-color">
+
+    <title>WTF-Captcha</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.3/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="icon" type="image/x-icon" href="/static/img/favicons/favicon.ico">
+
+    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+  </head>
+
+  <body class="has-navbar-fixed-top">
+    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item py-0 " href="/">
+          <img src="/static/img/phatnguoi_api-logo.png" alt="phatnguoi_api-logo">
+        </a>
+    
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="tomchienxu-navbar">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+    
+      <div id="tomchienxu-navbar" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item active" href="/">
+            Nghịch
+          </a>    
+          <a class="navbar-item" href="https://github.com/dookkii/WTF-Captcha">
+            Mã nguồn
+            <span>
+              <sup>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </sup>
+            </span>
+          </a>
+          <a class="navbar-item" href="https://github.com/dookkii">
+            Github
+            <span>
+              <sup>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </sup>
+            </span>
+          </a>
+        </div>
+    
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button is-link" href="javascript:void(0);">
+                hCaptcha
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="section">
+      <div class="container">
+        <div class="has-text-centered mb-5">
+          <h1 class="title mb-2">
+            CAPTCHA DEMOS - MÔ PHỎNG CAPTCHA 
+          </h1>
+          <p class="subtitle">
+            Nghịch đủ thể loại Captcha hẹ hẹ
+          </p>
+        </div>
+
+        <div class="columns is-centered">
+          <div class="column is-7">
+            <div class="message is-link">
+              <div class="message-header">Disclaimer! 🗣️🐧🔥</div>
+              <div class="message-body">
+                <p>
+                  Chiếc form đăng nhập dưới đây chỉ là đồ mô phỏng, cho dù bạn nhập đúng thông tin đăng nhập thì cũng không bị ghi lại đâu nha. Đừng bảo mình lập web giả đi phishing, tội nghiệp mình :<
+                </p>
+                <br>
+                <p>
+                  Web này được lập ra chỉ để các bạn nghịch hCaptcha thui, luyện aim để đăng ký tín trên <b><a href="https://dangkyhoc.vnu.edu.vn/dang-nhap">dangkyhoc.vnu.edu.vn</a></b> cho mượt hjhj.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="column is-5">
+            <div class="box">
+              <h1 class="title has-text-centered">Đăng nhập hệ thống</h1>
+              <form>
+                <div class="field">
+                  <label class="label">Tên truy cập:</label>
+                  <div class="control">
+                    <input class="input" type="text" placeholder="Tên truy cập">
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Mật khẩu:</label>
+                  <div class="control">
+                    <input class="input" type="password" placeholder="Mật khẩu">
+                  </div>
+                </div>
+
+                <div class="has-text-centered">
+                  <div class="h-captcha" data-sitekey="15145b34-11f8-4d2a-992c-b7602a001522" data-callback="onHCaptchaSuccess"></div>
+                </div>
+
+                <div class="field pt-2">
+                  <div class="control">
+                    <button class="button is-link is-fullwidth" id="submit-button" onclick="submitForm(event)">Đăng nhập</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer py-5">
+      <div class="content">
+        <div class="is-flex-desktop is-justify-content-space-between is-align-items-center">
+          <div class="has-text-centered-touch">
+            <span>
+              August, 2025 // Developed by <a class="is-underlined" href="https://github.com/dookkii"><b>dookkii</b></a> with 💖. Proudly protected by <b>hCaptcha</b>.
+              <br>
+              Whipped this up out of sheer boredom and existential dread.
+            </span>
+          </div>
+          
+          <div class="has-text-right-desktop has-text-centered-touch">
+            <div class="mt-2 is-hidden-desktop"></div>
+
+            <span class="icon-text">
+              <span><a href="https://github.com/dookkii">Github</a></span>
+              <span class="icon">
+                <i class="fa-brands fa-github"></i>
+              </span>
+            </span>
+
+            <br class="is-hidden-touch">
+            
+            <span class="icon-text">
+              <span><a href="https://facebook.com/fumiko.tunaa">Facebook</a></span>
+              <span class="icon">
+                <i class="fa-brands fa-facebook"></i>
+              </span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/static/js/index.js"></script>
+    <script src="/static/js/captcha-cac-kieu.js"></script>
+  </body>
+</html>
